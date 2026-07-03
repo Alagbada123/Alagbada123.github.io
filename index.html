@@ -1,243 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/user.jpg" type="image/x-icon">
-    <title> Alagbada's Portfolio </title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-    <script src="js/typed.min.js"></script>
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abiodun Victor Alagbada — Applied Mathematics · Koopman Methods for SHM</title>
+<meta name="description" content="Abiodun Victor Alagbada is a PhD researcher in Applied Mathematics at Bauhaus-Universität Weimar, working on Koopman-operator learning and hybrid physics–data frameworks for structural health monitoring.">
+<meta property="og:title" content="Abiodun Victor Alagbada">
+<meta property="og:description" content="PhD researcher in Applied Mathematics · Koopman operator methods for Structural Health Monitoring · Educator · Developer">
+<meta property="og:type" content="profile">
+<link rel="icon" href="images/user.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
+
+<a class="skip-link" href="#research">Skip to content</a>
+
+<header class="topbar">
+  <nav class="topbar-inner" aria-label="Primary">
+    <a href="#top" class="wordmark">A.V.&nbsp;Alagbada</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="site-menu" class="menu">
+      <li><a href="#research">Research</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="menu-cv" href="assets/Alagbada_Abiodun_CV.pdf" target="_blank" rel="noopener">CV&nbsp;↓</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">BAUHAUS-UNIVERSITÄT WEIMAR · INSTITUTE OF STRUCTURAL MECHANICS</p>
+    <h1>Abiodun Victor<br>Alagbada</h1>
+    <p class="hero-role">PhD Researcher in Applied Mathematics.
+       I study <em>Koopman-operator learning</em> and hybrid physics–data frameworks
+       for <em>structural health monitoring</em> — turning vibration signals from
+       real structures into interpretable, linear pictures of nonlinear dynamics.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#research">Publications</a>
+      <a class="btn btn-ghost" href="assets/Alagbada_Abiodun_CV.pdf" target="_blank" rel="noopener">Download CV</a>
     </div>
+    <ul class="hero-links" aria-label="Profiles">
+      <li><a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" rel="noopener">Google&nbsp;Scholar</a></li>
+      <li><a href="https://www.linkedin.com/in/abiodunalagbada/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/Alagbada123" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="mailto:abiodun.victor.alagbada@uni-weimar.de">Email</a></li>
+    </ul>
+  </div>
+  <div class="hero-signal" aria-hidden="true">
+    <canvas id="vibration"></canvas>
+    <p class="signal-caption">free-vibration response · x(t) = Σ Aᵢ e<sup>−ζᵢωᵢt</sup> cos(ω<sub>d,i</sub>t + φᵢ)</p>
+  </div>
+</section>
 
-    <nav class="navbar">
-        <div class="max-width">
-            <div class="logo"><a href="#about"><span>ProfB</span></a></div>
-            <ul class="menu">
-                <li><a href="#header" class="menu-btn">Home</a></li>
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#services" class="menu-btn">Services</a></li>
-                <li><a href="#portfolio" class="menu-btn">Portfolio</a></li>
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+<!-- ============ RESEARCH ============ -->
+<section id="research" class="section">
+  <div class="section-inner">
+    <p class="eyebrow">RESEARCH OUTPUT</p>
+    <h2>Publications</h2>
 
-    <div id="header">
-        <div class="container">
-            <div class="header-text">
-                <div class="text-1" data-aos="zoom-out">Hello, I am ProfB</div>
-                <div class="text-2" data-aos="zoom-out">Abiodun Victor Alagbada</div>
-                <div class="text-3" data-aos="zoom-out">And I'm a <span class="typing"></span></div>
-            </div>
-        </div>
+    <article class="pub featured">
+      <div class="pub-meta">
+        <span class="badge badge-journal">Journal article</span>
+        <span class="pub-year">2026</span>
+      </div>
+      <h3><a href="https://www.mdpi.com/2076-3417/16/7/3392" target="_blank" rel="noopener">Koopman Operator Methods in Structural Health Monitoring: A Systematic Review Towards Hybrid Physics–Data Frameworks</a></h3>
+      <p class="pub-authors"><strong>A. V. Alagbada</strong>, T. Lahmer</p>
+      <p class="pub-venue">Applied Sciences (MDPI), Vol. 16, Issue 7, Article 3392</p>
+      <p class="pub-abstract">A PRISMA-guided review of 67 peer-reviewed studies (2010–2025) tracing Koopman-based
+      methods from Dynamic Mode Decomposition and Extended DMD to applications across civil,
+      mechanical, and aerospace systems, and mapping the path toward hybrid physics–data
+      frameworks for vibration-based condition assessment.</p>
+      <p class="pub-links">
+        <a class="mono-link" href="https://doi.org/10.3390/app16073392" target="_blank" rel="noopener">doi:10.3390/app16073392</a>
+        <a class="mono-link" href="https://www.preprints.org/manuscript/202603.0780/v1" target="_blank" rel="noopener">preprint</a>
+      </p>
+    </article>
+
+    <article class="pub">
+      <div class="pub-meta">
+        <span class="badge badge-chapter">Book chapter</span>
+        <span class="pub-year">2026</span>
+      </div>
+      <h3>Machine Learning: Theoretical Foundations, Practical Applications, Ethical Implications, and Future Prospects — Exploring Challenges and Applications in Emerging Technologies</h3>
+      <p class="pub-authors"><strong>A. Alagbada</strong>, T. Iroko, S. Tchoneteck</p>
+      <p class="pub-venue">Encyclopedia of Modern Artificial Intelligence (10 Volumes)</p>
+    </article>
+
+    <article class="pub">
+      <div class="pub-meta">
+        <span class="badge badge-preprint">Preprint</span>
+        <span class="pub-year">2026</span>
+      </div>
+      <h3><a href="https://www.preprints.org" target="_blank" rel="noopener">Neural Regime-Switching Model with Markov-Informed Attention for Short-Horizon Equity Return Forecasting</a></h3>
+      <p class="pub-authors">T. Iroko, <strong>A. Alagbada</strong>, S. Tchoneteck</p>
+      <p class="pub-venue">Preprints.org</p>
+    </article>
+
+    <div class="research-grid">
+      <div class="research-card">
+        <h4>Current focus</h4>
+        <p>Interpretable, data-driven dynamical models for vibration-based condition
+        assessment and damage diagnosis: system identification, time-series learning,
+        and reduced-order representations, with reproducible Python workflows for
+        benchmarking and research-to-deployment translation.</p>
+      </div>
+      <div class="research-card">
+        <h4>Interests</h4>
+        <p>Koopman analysis · system identification · time-series learning ·
+        vibration-based condition monitoring · physics-informed machine learning ·
+        numerical methods for differential equations · optimization.</p>
+      </div>
+      <div class="research-card">
+        <h4>Earlier work</h4>
+        <p>MSc thesis (University of Jos, 2018): a class of block second-derivative
+        methods for stiff ordinary differential equations, supervised by
+        Prof. Kumleng Geoffrey. BSc thesis (2014) on the convergence of complex
+        power series, supervised by Dr. Silas Longwap.</p>
+      </div>
     </div>
-    <!-- About Section -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.jpg" alt="Profile Picture">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About me</h1>
-                    <p>I am a current PhD student specializing in Applied Mathematics at Bauhaus University in Weimar, Germany. My academic background includes a Master’s degree in Mathematics from the esteemed University of Jos, Plateau State. I am a certified teacher, having received accreditation from the Teachers' Registration Council of Nigeria in 2020. Additionally, I hold certifications as a Full Stack Developer from Opecstat Academy (2022), in Backend Web Development from Sidehustle (2022), and in WordPress from Nova University (2022). Outside of my professional and academic pursuits, I am passionate about sports and have a deep faith.</p>
+  </div>
+</section>
 
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('further-education')">Further Education</p>
-                    </div>
-
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Web Development</span><br>Web/App Development</li>
-                            <li><span>Research</span><br>Love to make research for deep knowledge</li>
-                            <li><span>Teaching</span><br>Impacting into the science world and teaching younger generation has always been a thing of Joy</li>
-                            <li><span>Programming Language</span><br>I love to program. Programming is a beautiful skill that makes the life of a Mathematician easier.</li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2020 - Present</span><br>Online Subject Teacher (Mathematics, Additional Mathematics) at Preply and Upwork<br>
-                                • Taught Mathematics following a specified curriculum for each candidate.<br>
-                                • Employed diverse teaching methods to achieve positive learning outcomes.
-                            </li>
-                            <li><span>2018 - 2023</span><br>Teacher: Mathematics, Additional Mathematics, and Computer at Omega High School, Jos<br>
-                                • Instructed Computer, Mathematics, and Further Mathematics.<br>
-                                • Conducted and supervised ICT laboratory activities.<br>
-                                • Planned weekly Mathematics and Physics lessons with adherence to the curriculum.
-                            </li>
-                            <li><span>2014 - 2017</span><br>Teacher: Mathematics, Additional Mathematics, and Physics at Corpus Christi Comprehensive College, Kwall, Jos (NYSC)</li>
-                            <li><span>2009 - 2010</span><br>Teacher: Mathematics, Additional Mathematics at K-pec High School, Lagos</li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2024 - Present</span><br>PhD in Applied Mathematics (In Progress)<br>Bauhaus University, Weimar, Germany, Department of Civil Engineering, Applied Mathematics</li>
-                            <li><span>2022 - 2023</span><br>Post-Graduate Diploma in Education (PGDE)<br>University of Ilorin, Ilorin, Nigeria</li>
-                            <li><span>2017 - 2018</span><br>MSc in Mathematics<br>University of Jos, Plateau State, Nigeria</li>
-                            <li><span>2010 - 2014</span><br>BSc in Mathematics (Second Class Upper Division)<br>University of Jos, Plateau State, Nigeria</li>
-                            <li><span>2007 - 2008</span><br>Advanced Level (A'Level)<br>Ahmadu Bello University, Zaria, Kaduna State, Nigeria</li>
-                            <li><span>2006 - 2007</span><br>Senior Secondary Certificate<br>S & J College, Mile 12, Lagos State, Nigeria</li>
-                            <li><span>1993 - 1999</span><br>First School Leaving Certificate<br>The Apostolic Church Primary School, Ketu, Lagos State, Nigeria</li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-contents" id="further-education">
-                        <ul>
-                            <li><span>2023</span><br>Web Design Consultancy Course<br>Nova University<br>Certificate of Completion</li>
-                            <li><span>2022</span><br>Soft-skills Training<br>Jobberman<br>Certificate of Achievement</li>
-                            <li><span>2022</span><br>Backend Web Developer Course<br>Side-Hustle<br>Certificate of Completion</li>
-                            <li><span>2022</span><br>Full-Stack Developer Course<br>Opecstat Academy, Lagos<br>Certificate of Completion</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section section-alt">
+  <div class="section-inner about-grid">
+    <figure class="about-photo">
+      <img src="images/user.jpg" alt="Portrait of Abiodun Victor Alagbada" loading="lazy">
+      <figcaption class="mono">Weimar, Germany</figcaption>
+    </figure>
+    <div class="about-text">
+      <p class="eyebrow">PROFILE</p>
+      <h2>About</h2>
+      <p>I am a PhD candidate in Applied Mathematics at Bauhaus-Universität Weimar,
+      supervised by Prof. Tom Lahmer at the Institute of Structural Mechanics. My
+      doctoral research develops Koopman-operator learning and hybrid physics–data
+      frameworks for structural health monitoring, supported by the
+      <strong>DAAD Scholarship (2025)</strong> and the
+      <strong>PTDF Scholarship (2023/2024 cohort)</strong>.</p>
+      <p>Before Weimar, I spent more than a decade teaching mathematics at secondary
+      and university level in Nigeria, and I completed the ALX Software Engineering
+      Programme with a backend specialization. That combination shapes how I work:
+      mathematical rigour first, then honest software engineering, then clear
+      communication of both.</p>
+      <p>I care about opening doors for the next generation of African researchers
+      and share the realities of the PhD journey along the way.</p>
+      <div class="fact-row">
+        <div class="fact"><span class="fact-k">Supervisor</span><span class="fact-v">Prof. Tom Lahmer</span></div>
+        <div class="fact"><span class="fact-k">Funding</span><span class="fact-v">DAAD · PTDF</span></div>
+        <div class="fact"><span class="fact-k">Languages</span><span class="fact-v">English · Yoruba · German (A2–B1)</span></div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- services section -->
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <h2>Teaching Philosophy</h2>
-                    <p>I am a dedicated educator committed to fostering a positive and engaging learning environment. Since starting my teaching career, I have continually refined my methods to inspire and support my students. My approach focuses on creating impactful and meaningful educational experiences that encourage growth and a love for learning.</p>
-                </div>
-
-                <div>
-                    <i class="fas fa-laptop-code"></i>
-                    <h2>Programming</h2>
-                    <p><span>Programming Skills</span><br>As an Applied Mathematician with a deep passion for programming, I view coding as an essential extension of my mathematical toolkit. Programming enables me to translate complex mathematical theories into practical algorithms and solutions, streamlining the process of solving intricate problems. It enhances my ability to analyze large datasets, implement advanced numerical methods, and automate repetitive tasks, making my work more efficient and accurate. By integrating programming into my mathematical research, I can develop innovative models and simulations that drive new insights and applications, thereby bridging the gap between theoretical mathematics and real-world problems.</p>
-                </div>
-
-                <div>
-                    <i class="fas fa-calculator"></i>
-                    <h2>Research Interests</h2>
-                    <p>I am passionate about exploring advanced mathematical theories and their practical applications. My research emphasizes the development and application of innovative numerical algorithms to solve complex differential equations, optimization of mathematical models, and the integration of data science techniques. This work aims to enhance decision-making and provide valuable insights across various domains.</p>
-                </div>
-            </div>
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="section">
+  <div class="section-inner">
+    <p class="eyebrow">TRAJECTORY</p>
+    <h2>Experience</h2>
+    <ol class="timeline">
+      <li>
+        <span class="tl-when">2024 — present</span>
+        <div class="tl-body">
+          <h3>Doctoral Researcher, Applied Mathematics</h3>
+          <p class="tl-org">Institute of Structural Mechanics, Bauhaus-Universität Weimar</p>
+          <p>Koopman-operator learning for SHM; system-identification and time-series
+          pipelines in Python with an emphasis on reproducibility and benchmarking.
+          SCRUM Master for a web-based pipeline-orchestration project integrating
+          domain logic for engineering workflows.</p>
         </div>
+      </li>
+      <li>
+        <span class="tl-when">2022 — present</span>
+        <div class="tl-body">
+          <h3>Full-Stack Developer / Backend Engineer</h3>
+          <p class="tl-org">Independent / project-based</p>
+          <p>Web and AI-based academic tools with Python (Django, Flask) and
+          JavaScript (React, Node.js); RESTful APIs and containerized pipelines
+          with Docker and GitHub Actions.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tl-when">2020 — present</span>
+        <div class="tl-body">
+          <h3>Online Mathematics Tutor</h3>
+          <p class="tl-org">Preply · Upwork</p>
+          <p>Personalized lessons and academic coaching for international learners,
+          using Jupyter, LaTeX, and computational visualization in the classroom.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tl-when">2018 — 2023</span>
+        <div class="tl-body">
+          <h3>Mathematics &amp; Computer Science Teacher</h3>
+          <p class="tl-org">Omega High School, Jos, Nigeria</p>
+          <p>Taught Mathematics, Additional Mathematics, and Computer Science;
+          led ICT laboratory work, curriculum planning, assessment moderation,
+          and student mentoring.</p>
+        </div>
+      </li>
+      <li>
+        <span class="tl-when">2014 — 2017</span>
+        <div class="tl-body">
+          <h3>Mathematics &amp; Physics Teacher (NYSC and after)</h3>
+          <p class="tl-org">Corpus Christi Comprehensive College, Kwall, Jos</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ TEACHING ============ -->
+<section id="teaching" class="section section-alt">
+  <div class="section-inner">
+    <p class="eyebrow">EDUCATION WORK</p>
+    <h2>Teaching &amp; Skills</h2>
+    <div class="teach-grid">
+      <div class="teach-card">
+        <h4>Teaching</h4>
+        <p>Qualified Teacher Status (UK Department for Education) and TRCN-certified,
+        with 10+ years across secondary and university mathematics. I teach the way
+        I research: build the intuition, then make the formalism inevitable.
+        Disciplines: applied mathematics, advanced mathematics, computer science.</p>
+      </div>
+      <div class="teach-card">
+        <h4>Scientific computing</h4>
+        <p class="mono skill-line">Python (advanced) · NumPy / Pandas · scikit-learn ·
+        TensorFlow · Jupyter / Marimo · MATLAB · LaTeX (advanced)</p>
+      </div>
+      <div class="teach-card">
+        <h4>Software engineering</h4>
+        <p class="mono skill-line">Django · Flask · React · Node.js · SQL · C/C++ ·
+        Docker · Git / GitHub · CI with GitHub Actions</p>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- Portfolio/ My Research Work -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Research experience</h1>
-            <div class="work" id="research-experience">
-                <ul>
-                    <li><span>2017 - 2018</span><br>A Class of Block Second Derivative Method for the Solution of Stiff Ordinary Differential Equations at Department of Mathematics, University of Jos<br>
-                        • Designed a novel class of block second derivative methods for solving stiff ordinary differential equations.<br>
-                        • Conducted critical theoretical analysis to ensure reliability and effectiveness.
-                    </li>
-                </ul>
-                <ul>
-                    <li><h4 class="sub-title">My Research Interests</h4><br>
-                        • Development and application of numerical algorithms to solve complex differential equations, focusing on improving accuracy and efficiency for large-scale simulations.<br>
-                        • Study of mathematical optimization methods, including linear, nonlinear, and dynamic programming, to solve real-world problems in logistics, resource management, and decision-making.<br>
-                        • Construction and analysis of mathematical models to represent and predict the behavior of physical systems in engineering, biology, and environmental science.<br>
-                        • Integration of applied mathematics with data science and machine learning techniques to analyze large datasets, develop predictive models, and enhance decision-making processes in various industries.
-                    </li>
-                </ul>
-            </div>
-            <a href="#" class="btn">See more</a>
-        </div>
+<!-- ============ EDUCATION ============ -->
+<section id="education" class="section">
+  <div class="section-inner edu-grid">
+    <div>
+      <p class="eyebrow">FORMATION</p>
+      <h2>Education</h2>
+      <ul class="edu-list">
+        <li><span class="mono">2024 —</span><div><strong>PhD, Applied Mathematics (in progress)</strong><br>Bauhaus-Universität Weimar, Germany</div></li>
+        <li><span class="mono">2023 — 2025</span><div><strong>Software Engineering, Backend Specialization</strong><br>ALX Africa</div></li>
+        <li><span class="mono">2022 — 2023</span><div><strong>Postgraduate Diploma in Education (PGDE)</strong><br>University of Ilorin, Nigeria</div></li>
+        <li><span class="mono">2017 — 2018</span><div><strong>MSc, Mathematics</strong><br>University of Jos, Nigeria</div></li>
+        <li><span class="mono">2010 — 2014</span><div><strong>BSc, Mathematics (Second Class Upper)</strong><br>University of Jos, Nigeria</div></li>
+      </ul>
+      <h3 class="sub-h">Certifications</h3>
+      <ul class="cert-list">
+        <li>Qualified Teacher Status — UK Department for Education (TRN 2361519)</li>
+        <li>Registered Teacher — Teachers' Registration Council of Nigeria (2020)</li>
+        <li>Web Design Consultancy — Nova University (2023)</li>
+        <li>Backend Web Development — Side Hustle (2022)</li>
+        <li>Full-Stack Development — Opecstat Academy (2022)</li>
+        <li>Soft-Skills Training — Jobberman (2022)</li>
+      </ul>
     </div>
-
-    <!-- Contact -->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fas fa-paper-plane"></i> abiodunalagbada@gmail.com ; abiodun.victor.alagbada@uni-weimar.de</p>
-                    <p><i class="fas fa-phone-square-alt"></i> +49-1762-6547570; +234-7038538910 </p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/alagbada.abiodun"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.github.com/Alagbada123"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/abiodunalagbada/"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form>
-                        <input class="name" type="text" name="Name" placeholder="Your Name" required>
-                        <input class="mail" type="email" name="email" placeholder="Your Email" required>
-                        <input class="subject" type="text" name="subject" placeholder="Your Subject" required>
-                        <textarea class="msg" name="Message" rows="6" placeholder="Your message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Copyright © ProfB.</p>
-        </div>
+    <div>
+      <p class="eyebrow">RECOGNITION</p>
+      <h2>Awards</h2>
+      <ul class="edu-list">
+        <li><span class="mono">2025</span><div><strong>DAAD Scholarship</strong><br>German Academic Exchange Service</div></li>
+        <li><span class="mono">2023/24</span><div><strong>PTDF Overseas Scholarship</strong><br>Petroleum Technology Development Fund, Nigeria</div></li>
+        <li><span class="mono">2013</span><div><strong>Bronze Medal</strong><br>National Mathematics Competition for University Students</div></li>
+      </ul>
+      <h3 class="sub-h">Memberships</h3>
+      <ul class="cert-list">
+        <li>American Mathematical Society (AMS)</li>
+        <li>Mathematics Association of Nigeria</li>
+        <li>Black in Mathematics, South Africa</li>
+      </ul>
     </div>
+  </div>
+</section>
 
-    <script>
-        const form = document.querySelector('.contact-right form');
-        //function to send the message when clicked on button send
-        function sendMsg(e) { 
-            e.preventDefault();
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section section-dark">
+  <div class="section-inner contact-inner">
+    <p class="eyebrow eyebrow-light">GET IN TOUCH</p>
+    <h2>Open to postdoc conversations<br>and research collaboration.</h2>
+    <p class="contact-lede">Koopman methods, structural health monitoring, physics-informed
+    machine learning, or mathematics education — if our interests overlap, write to me.</p>
+    <div class="contact-actions">
+      <a class="btn btn-light" href="mailto:abiodun.victor.alagbada@uni-weimar.de">abiodun.victor.alagbada@uni-weimar.de</a>
+      <a class="btn btn-ghost-light" href="mailto:abiodunalagbada@gmail.com">abiodunalagbada@gmail.com</a>
+    </div>
+    <ul class="hero-links contact-links">
+      <li><a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" rel="noopener">Google Scholar</a></li>
+      <li><a href="https://www.linkedin.com/in/abiodunalagbada/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/Alagbada123" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="assets/Alagbada_Abiodun_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
+    </ul>
+    <p class="footer-line mono">© <span id="year"></span> Abiodun Victor Alagbada · Weimar, Germany</p>
+  </div>
+</section>
 
-            const name = document.querySelector('.name').value,
-                  mail = document.querySelector('.mail').value,
-                  subject = document.querySelector('.subject').value,
-                  msg = document.querySelector('.msg').value;
-
-            // Function Send Email
-            Email.send({
-                SecureToken: "9d2025b0-f5e2-4358-9a33-5826b7c921dc",
-                To: 'abiodunalagbada@gmail.com',
-                From: mail,
-                Subject: subject,
-                Body: msg
-            }).then(
-                message => alert(message)
-            );
-        }
-
-        form.addEventListener('submit', sendMsg);
-    </script>
-
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (tablink of tablinks) { 
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-
-    <script src="js/script.js"></script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
