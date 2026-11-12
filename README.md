@@ -27,3 +27,5 @@ Then open <http://localhost:8000>.
 **Replace the CV.** Overwrite `assets/Abiodun_Alagbada.pdf` and keep the same file name. If the name changes, update the three links to it in `index.html`.
 
 **Add a talk photo.** Save a 3:2 JPEG, 1500 by 1000 pixels, in `images/talks/`. Add a `<figure class="slide">` with an `alt` text and a `<figcaption>` inside the `slideshow` block. The script builds the dots and controls from the slides it finds.
+
+**Change the CSS or JavaScript.** Raise the version number in `css/style.css?v=4` and `js/main.js?v=4` in `index.html`. Browsers keep the old files for a while otherwise, and visitors see the previous design or animation.

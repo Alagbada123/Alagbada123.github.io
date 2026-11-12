@@ -31,7 +31,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=4" />
 
     <script type="application/ld+json">
       {
@@ -152,8 +152,13 @@
         <div class="wrap signal" aria-hidden="true">
           <canvas id="signal"></canvas>
           <p class="signal-caption">
-            Free-vibration response of a three-mode damped system,
-            x(t) = Σ A<sub>i</sub> e<sup>−ζ<sub>i</sub>ω<sub>i</sub>t</sup> cos(ω<sub>d,i</sub>t + φ<sub>i</sub>)
+            <span class="signal-key is-sum" style="--key: var(--accent)">Free-vibration response x(t)</span>
+            <span class="signal-key" style="--key: var(--mode-1)">Mode 1</span>
+            <span class="signal-key" style="--key: var(--mode-2)">Mode 2</span>
+            <span class="signal-key" style="--key: var(--mode-3)">Mode 3</span>
+            <span>
+              x(t) = Σ A<sub>i</sub> e<sup>−ζ<sub>i</sub>ω<sub>i</sub>t</sup> cos(ω<sub>d,i</sub>t + φ<sub>i</sub>)
+            </span>
           </p>
         </div>
       </section>
@@ -941,6 +946,6 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=4"></script>
   </body>
 </html>

@@ -17,6 +17,10 @@
   --accent-strong: #0a474d;
   --accent-soft: #e6f1f1;
   --on-accent: #ffffff;
+  --signal: #d4481c; /* read head of the hero vibration trace only */
+  --mode-1: #5b83b8; /* the three modal components behind the trace */
+  --mode-2: #9079c0;
+  --mode-3: #b99335;
   --shadow: 0 1px 2px rgba(19, 26, 32, 0.05), 0 8px 24px rgba(19, 26, 32, 0.06);
 
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -41,6 +45,10 @@
     --accent-strong: #93d8d3;
     --accent-soft: #17302f;
     --on-accent: #0b1a1b;
+    --signal: #ff8a52;
+    --mode-1: #7fa6dc;
+    --mode-2: #b29be0;
+    --mode-3: #d9b45a;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
   }
 }
@@ -322,12 +330,32 @@ sup {
 #signal {
   display: block;
   width: 100%;
-  height: 110px;
+  height: 130px;
 }
 .signal-caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1.25rem;
   padding: 0.35rem 0 1.25rem;
   font-size: 0.75rem;
   color: var(--muted);
+}
+.signal-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+.signal-key::before {
+  content: "";
+  width: 16px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--key);
+}
+.signal-key.is-sum::before {
+  height: 3px;
 }
 
 /* ---------- sections ---------- */
@@ -935,7 +963,7 @@ sup {
     margin-top: 2.25rem;
   }
   #signal {
-    height: 80px;
+    height: 100px;
   }
   .section {
     padding: 3.25rem 0;
