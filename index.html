@@ -2,556 +2,944 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Abiodun Victor Alagbada — Applied Mathematics · Koopman Methods for SHM
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abiodun Victor Alagbada | Applied Mathematics and Structural Health Monitoring</title>
     <meta
       name="description"
-      content="Abiodun Victor Alagbada is a PhD researcher in Applied Mathematics at Bauhaus-Universität Weimar, working on Koopman-operator learning and hybrid physics–data frameworks for structural health monitoring."
+      content="Abiodun Victor Alagbada is a PhD candidate in applied mathematics at Bauhaus-Universität Weimar. He works on Koopman operator methods and hybrid physics-data models for structural health monitoring."
     />
+    <meta name="author" content="Abiodun Victor Alagbada" />
+    <link rel="canonical" href="https://alagbada123.github.io/" />
+
+    <meta property="og:type" content="profile" />
     <meta property="og:title" content="Abiodun Victor Alagbada" />
     <meta
       property="og:description"
-      content="PhD researcher in Applied Mathematics · Koopman operator methods for Structural Health Monitoring · Educator · Developer"
+      content="PhD candidate in applied mathematics, Bauhaus-Universität Weimar. Koopman operator methods and hybrid physics-data models for structural health monitoring."
     />
-    <meta property="og:type" content="profile" />
-    <link rel="icon" href="images/user.jpg" />
+    <meta property="og:url" content="https://alagbada123.github.io/" />
+    <meta property="og:image" content="https://alagbada123.github.io/images/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f1317" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#research">Skip to content</a>
 
-    <header class="topbar">
-      <nav class="topbar-inner" aria-label="Primary">
-        <a href="#top" class="wordmark">A.V.&nbsp;Alagbada</a>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abiodun Victor Alagbada",
+        "url": "https://alagbada123.github.io/",
+        "image": "https://alagbada123.github.io/images/user.jpg",
+        "jobTitle": "PhD Candidate in Applied Mathematics",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Bauhaus-Universität Weimar",
+          "department": "Institute of Structural Mechanics"
+        },
+        "knowsAbout": [
+          "Koopman operator theory",
+          "Structural health monitoring",
+          "System identification",
+          "Physics-informed machine learning"
+        ],
+        "sameAs": [
+          "https://scholar.google.com/citations?hl=en&user=Wmna1QoAAAAJ",
+          "https://orcid.org/0000-0003-4801-8907",
+          "https://github.com/Alagbada123",
+          "https://www.linkedin.com/in/abiodunalagbada/"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top">Abiodun V. Alagbada</a>
         <button
           class="nav-toggle"
+          type="button"
           aria-expanded="false"
-          aria-controls="site-menu"
+          aria-controls="site-nav"
           aria-label="Open menu"
         >
           <span></span><span></span><span></span>
         </button>
-        <ul id="site-menu" class="menu">
-          <li><a href="#research">Research</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#teaching">Teaching</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li>
-            <a
-              class="menu-cv"
-              href="assets/Alagbada_Abiodun_CV.pdf"
-              target="_blank"
-              rel="noopener"
-              >CV&nbsp;↓</a
-            >
-          </li>
-        </ul>
-      </nav>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#talks">Talks</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a class="nav-cv" href="assets/Abiodun_Alagbada.pdf" target="_blank" rel="noopener">CV</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <!-- ============ HERO ============ -->
-    <section id="top" class="hero">
-      <div class="hero-inner">
-        <p class="eyebrow">
-          BAUHAUS-UNIVERSITÄT WEIMAR · INSTITUTE OF STRUCTURAL MECHANICS
-        </p>
-        <h1>Abiodun Victor<br />Alagbada</h1>
-        <p class="hero-role">
-          PhD Researcher in Applied Mathematics. I study
-          <em>Koopman-operator learning</em> and hybrid physics–data frameworks
-          for <em>structural health monitoring</em> — turning vibration signals
-          from real structures into interpretable, linear pictures of nonlinear
-          dynamics.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-solid" href="#research">Publications</a>
-          <a
-            class="btn btn-ghost"
-            href="assets/Alagbada_Abiodun_CV.pdf"
-            target="_blank"
-            rel="noopener"
-            >Download CV</a
-          >
+    <main id="main">
+      <!-- ============ INTRO ============ -->
+      <section id="top" class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-text">
+            <p class="kicker">PhD Candidate in Applied Mathematics</p>
+            <h1>Abiodun Victor Alagbada</h1>
+            <p class="lead">
+              I build data-driven and physics-informed models of structural dynamics. My doctoral
+              research applies Koopman operator methods to vibration-based structural health
+              monitoring.
+            </p>
+            <p class="affiliation">
+              Institute of Structural Mechanics<br />
+              Bauhaus-Universität Weimar, Germany
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#publications">View publications</a>
+              <a class="btn btn-secondary" href="assets/Abiodun_Alagbada.pdf" target="_blank" rel="noopener"
+                >Download CV</a
+              >
+            </div>
+            <ul class="profiles" aria-label="Profiles">
+              <li>
+                <a
+                  href="https://scholar.google.com/citations?hl=en&amp;user=Wmna1QoAAAAJ"
+                  target="_blank"
+                  rel="noopener"
+                  >Google Scholar</a
+                >
+              </li>
+              <li>
+                <a href="https://orcid.org/0000-0003-4801-8907" target="_blank" rel="noopener">ORCID</a>
+              </li>
+              <li>
+                <a href="https://github.com/Alagbada123" target="_blank" rel="noopener">GitHub</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/abiodunalagbada/" target="_blank" rel="noopener"
+                  >LinkedIn</a
+                >
+              </li>
+              <li><a href="mailto:abiodun.victor.alagbada@uni-weimar.de">Email</a></li>
+            </ul>
+          </div>
+          <figure class="hero-photo">
+            <img
+              src="images/user.jpg"
+              alt="Portrait of Abiodun Victor Alagbada"
+              width="864"
+              height="1080"
+            />
+          </figure>
         </div>
-        <ul class="hero-links" aria-label="Profiles">
-          <li>
-            <a
-              href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID"
-              target="_blank"
-              rel="noopener"
-              >Google&nbsp;Scholar</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/abiodunalagbada/"
-              target="_blank"
-              rel="noopener"
-              >LinkedIn</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://github.com/Alagbada123"
-              target="_blank"
-              rel="noopener"
-              >GitHub</a
-            >
-          </li>
-          <li>
-            <a href="mailto:abiodun.victor.alagbada@uni-weimar.de">Email</a>
-          </li>
-        </ul>
-      </div>
-      <div class="hero-signal" aria-hidden="true">
-        <canvas id="vibration"></canvas>
-        <p class="signal-caption">
-          free-vibration response · x(t) = Σ Aᵢ e<sup>−ζᵢωᵢt</sup>
-          cos(ω<sub>d,i</sub>t + φᵢ)
-        </p>
-      </div>
-    </section>
+        <div class="wrap signal" aria-hidden="true">
+          <canvas id="signal"></canvas>
+          <p class="signal-caption">
+            Free-vibration response of a three-mode damped system,
+            x(t) = Σ A<sub>i</sub> e<sup>−ζ<sub>i</sub>ω<sub>i</sub>t</sup> cos(ω<sub>d,i</sub>t + φ<sub>i</sub>)
+          </p>
+        </div>
+      </section>
 
-    <!-- ============ RESEARCH ============ -->
-    <section id="research" class="section">
-      <div class="section-inner">
-        <p class="eyebrow">RESEARCH OUTPUT</p>
-        <h2>Publications</h2>
-
-        <article class="pub featured">
-          <div class="pub-meta">
-            <span class="badge badge-journal">Journal article</span>
-            <span class="pub-year">2026</span>
-          </div>
-          <h3>
-            <a
-              href="https://www.mdpi.com/2076-3417/16/7/3392"
-              target="_blank"
-              rel="noopener"
-              >Koopman Operator Methods in Structural Health Monitoring: A
-              Systematic Review Towards Hybrid Physics–Data Frameworks</a
-            >
-          </h3>
-          <p class="pub-authors"><strong>A. V. Alagbada</strong>, T. Lahmer</p>
-          <p class="pub-venue">
-            Applied Sciences (MDPI), Vol. 16, Issue 7, Article 3392
-          </p>
-          <p class="pub-abstract">
-            A PRISMA-guided review of 67 peer-reviewed studies (2010–2025)
-            tracing Koopman-based methods from Dynamic Mode Decomposition and
-            Extended DMD to applications across civil, mechanical, and aerospace
-            systems, and mapping the path toward hybrid physics–data frameworks
-            for vibration-based condition assessment.
-          </p>
-          <p class="pub-links">
-            <a
-              class="mono-link"
-              href="https://doi.org/10.3390/app16073392"
-              target="_blank"
-              rel="noopener"
-              >doi:10.3390/app16073392</a
-            >
-            <a
-              class="mono-link"
-              href="https://www.preprints.org/manuscript/202603.0780/v1"
-              target="_blank"
-              rel="noopener"
-              >preprint</a
-            >
-          </p>
-        </article>
-
-        <article class="pub">
-          <div class="pub-meta">
-            <span class="badge badge-chapter">Book chapter</span>
-            <span class="pub-year">2026</span>
-          </div>
-          <h3>
-            Machine Learning: Theoretical Foundations, Practical Applications,
-            Ethical Implications, and Future Prospects — Exploring Challenges
-            and Applications in Emerging Technologies
-          </h3>
-          <p class="pub-authors">
-            <strong>A. Alagbada</strong>, T. Iroko, S. Tchoneteck
-          </p>
-          <p class="pub-venue">
-            Encyclopedia of Modern Artificial Intelligence (10 Volumes)
-          </p>
-        </article>
-
-        <article class="pub">
-          <div class="pub-meta">
-            <span class="badge badge-preprint">Preprint</span>
-            <span class="pub-year">2026</span>
-          </div>
-          <h3>
-            <a href="https://www.preprints.org" target="_blank" rel="noopener"
-              >Neural Regime-Switching Model with Markov-Informed Attention for
-              Short-Horizon Equity Return Forecasting</a
-            >
-          </h3>
-          <p class="pub-authors">
-            T. Iroko, <strong>A. Alagbada</strong>, S. Tchoneteck
-          </p>
-          <p class="pub-venue">Preprints.org</p>
-        </article>
-
-        <div class="research-grid">
-          <div class="research-card">
-            <h4>Current focus</h4>
+      <!-- ============ ABOUT ============ -->
+      <section id="about" class="section">
+        <div class="wrap section-grid">
+          <h2 class="section-title">About</h2>
+          <div class="section-body prose">
             <p>
-              Interpretable, data-driven dynamical models for vibration-based
-              condition assessment and damage diagnosis: system identification,
-              time-series learning, and reduced-order representations, with
-              reproducible Python workflows for benchmarking and
-              research-to-deployment translation.
+              I am a PhD candidate at the Institute of Structural Mechanics, Bauhaus-Universität
+              Weimar, supervised by Prof. Tom Lahmer. My research develops Koopman operator methods
+              and hybrid physics–data models for vibration-based structural health monitoring. The
+              DAAD Doctoral Scholarship and the PTDF Scholarship fund this work.
             </p>
-          </div>
-          <div class="research-card">
-            <h4>Interests</h4>
             <p>
-              Koopman analysis · system identification · time-series learning ·
-              vibration-based condition monitoring · physics-informed machine
-              learning · numerical methods for differential equations ·
-              optimization.
+              I am also a certified back-end software engineer. I build Python and JavaScript
+              services, and I led a Scrum team on an industry pipeline-orchestration project with
+              MKP GmbH.
             </p>
-          </div>
-          <div class="research-card">
-            <h4>Earlier work</h4>
             <p>
-              MSc thesis (University of Jos, 2018): a class of block
-              second-derivative methods for stiff ordinary differential
-              equations, supervised by Prof. Kumleng Geoffrey. BSc thesis (2014)
-              on the convergence of complex power series, supervised by Dr.
-              Silas Longwap.
+              Before Weimar I taught mathematics for more than ten years in Nigerian schools and
+              online, and I hold UK Qualified Teacher Status. I care about opening doors for the
+              next generation of African researchers, and I share the realities of the PhD journey
+              along the way.
             </p>
+            <dl class="facts">
+              <div>
+                <dt>Supervisor</dt>
+                <dd>Prof. Tom Lahmer</dd>
+              </div>
+              <div>
+                <dt>Funding</dt>
+                <dd>DAAD, PTDF</dd>
+              </div>
+              <div>
+                <dt>Languages</dt>
+                <dd>English, Yoruba, German (A2–B1)</dd>
+              </div>
+              <div>
+                <dt>Location</dt>
+                <dd>Weimar, Germany</dd>
+              </div>
+            </dl>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section id="about" class="section section-alt">
-      <div class="section-inner about-grid">
-        <figure class="about-photo">
-          <img
-            src="images/user.jpg"
-            alt="Portrait of Abiodun Victor Alagbada"
-            loading="lazy"
-          />
-          <figcaption class="mono">Weimar, Germany</figcaption>
-        </figure>
-        <div class="about-text">
-          <p class="eyebrow">PROFILE</p>
-          <h2>About</h2>
-          <p>
-            I am a PhD candidate in Applied Mathematics at Bauhaus-Universität
-            Weimar, supervised by Prof. Tom Lahmer at the Institute of
-            Structural Mechanics. My doctoral research develops Koopman-operator
-            learning and hybrid physics–data frameworks for structural health
-            monitoring, supported by the
-            <strong>DAAD Scholarship (2025)</strong> and the
-            <strong>PTDF Scholarship (2023/2024 cohort)</strong>.
-          </p>
-          <p>
-            Before Weimar, I spent more than a decade teaching mathematics at
-            secondary and university level in Nigeria, and I completed the ALX
-            Software Engineering Programme with a backend specialization. That
-            combination shapes how I work: mathematical rigour first, then
-            honest software engineering, then clear communication of both.
-          </p>
-          <p>
-            I care about opening doors for the next generation of African
-            researchers and share the realities of the PhD journey along the
-            way.
-          </p>
-          <div class="fact-row">
-            <div class="fact">
-              <span class="fact-k">Supervisor</span
-              ><span class="fact-v">Prof. Tom Lahmer</span>
-            </div>
-            <div class="fact">
-              <span class="fact-k">Funding</span
-              ><span class="fact-v">DAAD · PTDF</span>
-            </div>
-            <div class="fact">
-              <span class="fact-k">Languages</span
-              ><span class="fact-v">English · Yoruba · German (A2–B1)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ EXPERIENCE ============ -->
-    <section id="experience" class="section">
-      <div class="section-inner">
-        <p class="eyebrow">TRAJECTORY</p>
-        <h2>Experience</h2>
-        <ol class="timeline">
-          <li>
-            <span class="tl-when">2024 — present</span>
-            <div class="tl-body">
-              <h3>Doctoral Researcher, Applied Mathematics</h3>
-              <p class="tl-org">
-                Institute of Structural Mechanics, Bauhaus-Universität Weimar
-              </p>
-              <p>
-                Koopman-operator learning for SHM; system-identification and
-                time-series pipelines in Python with an emphasis on
-                reproducibility and benchmarking. SCRUM Master for a web-based
-                pipeline-orchestration project integrating domain logic for
-                engineering workflows.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="tl-when">2022 — present</span>
-            <div class="tl-body">
-              <h3>Full-Stack Developer / Backend Engineer</h3>
-              <p class="tl-org">Independent / project-based</p>
-              <p>
-                Web and AI-based academic tools with Python (Django, Flask) and
-                JavaScript (React, Node.js); RESTful APIs and containerized
-                pipelines with Docker and GitHub Actions.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="tl-when">2020 — present</span>
-            <div class="tl-body">
-              <h3>Online Mathematics Tutor</h3>
-              <p class="tl-org">Preply · Upwork</p>
-              <p>
-                Personalized lessons and academic coaching for international
-                learners, using Jupyter, LaTeX, and computational visualization
-                in the classroom.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="tl-when">2018 — 2023</span>
-            <div class="tl-body">
-              <h3>Mathematics &amp; Computer Science Teacher</h3>
-              <p class="tl-org">Omega High School, Jos, Nigeria</p>
-              <p>
-                Taught Mathematics, Additional Mathematics, and Computer
-                Science; led ICT laboratory work, curriculum planning,
-                assessment moderation, and student mentoring.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="tl-when">2014 — 2017</span>
-            <div class="tl-body">
-              <h3>Mathematics &amp; Physics Teacher (NYSC and after)</h3>
-              <p class="tl-org">
-                Corpus Christi Comprehensive College, Kwall, Jos
-              </p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ============ TEACHING ============ -->
-    <section id="teaching" class="section section-alt">
-      <div class="section-inner">
-        <p class="eyebrow">EDUCATION WORK</p>
-        <h2>Teaching &amp; Skills</h2>
-        <div class="teach-grid">
-          <div class="teach-card">
-            <h4>Teaching</h4>
-            <p>
-              Qualified Teacher Status (UK Department for Education) and
-              TRCN-certified, with 10+ years across secondary and university
-              mathematics. I teach the way I research: build the intuition, then
-              make the formalism inevitable. Disciplines: applied mathematics,
-              advanced mathematics, computer science.
+      <!-- ============ RESEARCH ============ -->
+      <section id="research" class="section section-tint">
+        <div class="wrap section-grid">
+          <h2 class="section-title">Research</h2>
+          <div class="section-body">
+            <p class="section-intro">
+              Bridges, towers and other structures reveal their condition through the way they
+              vibrate. I develop models that read those measurements accurately, stay interpretable
+              and respect the underlying physics.
             </p>
-          </div>
-          <div class="teach-card">
-            <h4>Scientific computing</h4>
-            <p class="mono skill-line">
-              Python (advanced) · NumPy / Pandas · scikit-learn · TensorFlow ·
-              Jupyter / Marimo · MATLAB · LaTeX (advanced)
-            </p>
-          </div>
-          <div class="teach-card">
-            <h4>Software engineering</h4>
-            <p class="mono skill-line">
-              Django · Flask · React · Node.js · SQL · C/C++ · Docker · Git /
-              GitHub · CI with GitHub Actions
-            </p>
+            <div class="cards">
+              <article class="card">
+                <h3>Koopman operator learning</h3>
+                <p>
+                  Koopman theory represents nonlinear dynamics through a linear operator acting on
+                  observables. I use it for system identification and reduced-order modelling of
+                  structural vibration data.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Hybrid physics–data models</h3>
+                <p>
+                  Data-driven surrogates can dissipate energy that the real structure conserves, so
+                  model error and damage look alike. I couple exact analytical propagators with
+                  structure-preserving learned corrections.
+                </p>
+              </article>
+              <article class="card">
+                <h3>Numerical methods for stiff ODEs</h3>
+                <p>
+                  My MSc thesis studied block second-derivative methods for stiff ordinary
+                  differential equations. A current preprint analyses the stability barriers of
+                  these collocation methods.
+                </p>
+              </article>
+            </div>
+            <ul class="tags" aria-label="Research interests">
+              <li>Koopman operator theory</li>
+              <li>Structural health monitoring</li>
+              <li>System identification</li>
+              <li>Physics-informed machine learning</li>
+              <li>Structure-preserving learning</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ============ EDUCATION ============ -->
-    <section id="education" class="section">
-      <div class="section-inner edu-grid">
-        <div>
-          <p class="eyebrow">FORMATION</p>
-          <h2>Education</h2>
-          <ul class="edu-list">
-            <li>
-              <span class="mono">2024 —</span>
-              <div>
-                <strong>PhD, Applied Mathematics (in progress)</strong
-                ><br />Bauhaus-Universität Weimar, Germany
-              </div>
-            </li>
-            <li>
-              <span class="mono">2023 — 2025</span>
-              <div>
-                <strong>Software Engineering, Backend Specialization</strong
-                ><br />ALX Africa
-              </div>
-            </li>
-            <li>
-              <span class="mono">2022 — 2023</span>
-              <div>
-                <strong>Postgraduate Diploma in Education (PGDE)</strong
-                ><br />University of Ilorin, Nigeria
-              </div>
-            </li>
-            <li>
-              <span class="mono">2017 — 2018</span>
-              <div>
-                <strong>MSc, Mathematics</strong><br />University of Jos,
-                Nigeria
-              </div>
-            </li>
-            <li>
-              <span class="mono">2010 — 2014</span>
-              <div>
-                <strong>BSc, Mathematics (Second Class Upper)</strong
-                ><br />University of Jos, Nigeria
-              </div>
-            </li>
-          </ul>
-          <h3 class="sub-h">Certifications</h3>
-          <ul class="cert-list">
-            <li>
-              Qualified Teacher Status — UK Department for Education (TRN
-              2361519)
-            </li>
-            <li>
-              Registered Teacher — Teachers' Registration Council of Nigeria
-              (2020)
-            </li>
-            <li>Web Design Consultancy — Nova University (2023)</li>
-            <li>Backend Web Development — Side Hustle (2022)</li>
-            <li>Full-Stack Development — Opecstat Academy (2022)</li>
-            <li>Soft-Skills Training — Jobberman (2022)</li>
-          </ul>
-        </div>
-        <div>
-          <p class="eyebrow">RECOGNITION</p>
-          <h2>Awards</h2>
-          <ul class="edu-list">
-            <li>
-              <span class="mono">2025</span>
-              <div>
-                <strong>DAAD Scholarship</strong><br />German Academic Exchange
-                Service
-              </div>
-            </li>
-            <li>
-              <span class="mono">2023/24</span>
-              <div>
-                <strong>PTDF Overseas Scholarship</strong><br />Petroleum
-                Technology Development Fund, Nigeria
-              </div>
-            </li>
-            <li>
-              <span class="mono">2013</span>
-              <div>
-                <strong>Bronze Medal</strong><br />National Mathematics
-                Competition for University Students
-              </div>
-            </li>
-          </ul>
-          <h3 class="sub-h">Memberships</h3>
-          <ul class="cert-list">
-            <li>American Mathematical Society (AMS)</li>
-            <li>Mathematics Association of Nigeria</li>
-            <li>Black in Mathematics, South Africa</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      <!-- ============ PUBLICATIONS ============ -->
+      <section id="publications" class="section">
+        <div class="wrap section-grid">
+          <h2 class="section-title">Publications</h2>
+          <div class="section-body">
+            <p class="section-intro">
+              Citation counts and the most recent list are on
+              <a href="https://scholar.google.com/citations?hl=en&amp;user=Wmna1QoAAAAJ" target="_blank" rel="noopener"
+                >Google Scholar</a
+              >
+              and
+              <a href="https://orcid.org/0000-0003-4801-8907" target="_blank" rel="noopener">ORCID</a>.
+            </p>
 
-    <!-- ============ CONTACT ============ -->
-    <section id="contact" class="section section-dark">
-      <div class="section-inner contact-inner">
-        <p class="eyebrow eyebrow-light">GET IN TOUCH</p>
-        <h2>Open to postdoc conversations<br />and research collaboration.</h2>
-        <p class="contact-lede">
-          Koopman methods, structural health monitoring, physics-informed
-          machine learning, or mathematics education — if our interests overlap,
-          write to me.
-        </p>
-        <div class="contact-actions">
-          <a
-            class="btn btn-light"
-            href="mailto:abiodun.victor.alagbada@uni-weimar.de"
-            >abiodun.victor.alagbada@uni-weimar.de</a
-          >
-          <a class="btn btn-ghost-light" href="mailto:abiodunalagbada@gmail.com"
-            >abiodunalagbada@gmail.com</a
-          >
+            <nav class="pub-index" aria-label="Publication categories">
+              <a href="#pub-journal">Journal articles <span>1</span></a>
+              <a href="#pub-conference">Conference papers <span>1</span></a>
+              <a href="#pub-chapter">Book chapters <span>1</span></a>
+              <a href="#pub-preprint">Preprints <span>2</span></a>
+              <a href="#pub-thesis">Theses <span>2</span></a>
+            </nav>
+
+            <!-- Journal articles -->
+            <section class="pub-group" aria-labelledby="pub-journal">
+              <h3 id="pub-journal">Journal articles</h3>
+              <ol class="pub-list">
+                <li class="pub">
+                  <span class="pub-key">J1</span>
+                  <div class="pub-body">
+                    <h4 class="pub-title">
+                      <a href="https://doi.org/10.3390/app16073392" target="_blank" rel="noopener"
+                        >Koopman Operator Methods in Structural Health Monitoring: A Systematic
+                        Review Towards Hybrid Physics–Data Frameworks</a
+                      >
+                    </h4>
+                    <p class="pub-authors"><strong>A. V. Alagbada</strong> and T. Lahmer</p>
+                    <p class="pub-venue"><em>Applied Sciences</em>, 16(7), 3392, 2026.</p>
+                    <ul class="pub-links">
+                      <li>
+                        <a href="https://doi.org/10.3390/app16073392" target="_blank" rel="noopener"
+                          >doi:10.3390/app16073392</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://doi.org/10.20944/preprints202603.0780.v1"
+                          target="_blank"
+                          rel="noopener"
+                          >Preprint</a
+                        >
+                      </li>
+                    </ul>
+                    <details class="pub-abstract">
+                      <summary>Summary</summary>
+                      <p>
+                        A PRISMA-guided review of 67 peer-reviewed studies published between 2010
+                        and 2025. It traces Koopman-based methods from Dynamic Mode Decomposition
+                        and Extended DMD to applications in civil, mechanical and aerospace
+                        systems, and it maps the path toward hybrid physics–data frameworks for
+                        vibration-based condition assessment.
+                      </p>
+                    </details>
+                  </div>
+                </li>
+              </ol>
+            </section>
+
+            <!-- Conference papers -->
+            <section class="pub-group" aria-labelledby="pub-conference">
+              <h3 id="pub-conference">Conference papers</h3>
+              <ol class="pub-list">
+                <li class="pub">
+                  <span class="pub-key">C1</span>
+                  <div class="pub-body">
+                    <h4 class="pub-title">
+                      SAK-Net: Symplectic Attention Koopman Networks for Wave PDEs with Adaptive
+                      Analytical-Learned Dynamics
+                      <span class="status">In press</span>
+                    </h4>
+                    <p class="pub-authors">
+                      <strong>A. V. Alagbada</strong>, T. Lahmer, T. Iroko and A. Tchoneteck
+                    </p>
+                    <p class="pub-venue">
+                      In M. Baeßler, R. Herrmann, F. Hille, E. Niederleithinger and J. F. Unger
+                      (eds.),
+                      <em
+                        >Physics informed Structural Health Monitoring: Proceedings of CSHM-10
+                        Workshop</em
+                      >. Lecture Notes in Civil Engineering, vol. 966. Springer, 2026.
+                    </p>
+                    <ul class="pub-links">
+                      <li>
+                        <a
+                          href="https://link.springer.com/book/9783032440853"
+                          target="_blank"
+                          rel="noopener"
+                          >Proceedings volume</a
+                        >
+                      </li>
+                      <li><a href="#talks">Conference talk</a></li>
+                    </ul>
+                    <details class="pub-abstract">
+                      <summary>Abstract</summary>
+                      <p>
+                        Predicting wave propagation in structures is central to structural health
+                        monitoring (SHM), yet many data-driven predictors trade physical
+                        consistency for short-horizon accuracy. This conference version introduces
+                        SAK-Net, a Symplectic Attention Koopman Network that couples an exact
+                        analytical propagator with a structure-preserving learned correction
+                        module, and it reports validation on linear and linearly damped wave
+                        benchmarks.
+                      </p>
+                      <p>
+                        First, we derive a Discrete-Exact Koopman Propagator (DEKP) by matching the
+                        leapfrog finite-difference stencil using discrete Laplacian eigenvalues and
+                        a backward-difference modal velocity. For undamped linear wave dynamics,
+                        the resulting block-diagonal Koopman operator reproduces the generating
+                        numerical scheme to machine precision and is symplectic in each 2 × 2 modal
+                        phase plane. Second, we formulate and implement a symplectic encoder,
+                        symplectic delay-attention, and a symplectic Koopman latent map intended to
+                        correct deviations from the analytical model. Third, we implement an
+                        adaptive blending mechanism, driven by a physics-based model-mismatch
+                        indicator, that selects analytical execution for near-linear regimes and
+                        activates learning only when necessary.
+                      </p>
+                      <p>
+                        Compared with DMD, EDMD and LSTM baselines, DEKP attains machine-precision
+                        errors on the linear benchmark and yields accurate rollouts on linearly
+                        damped dynamics while estimating an effective damping rate from modal
+                        energy decay. Nonlinear benchmarks, ablations and field-data validation are
+                        reserved for the journal extension.
+                      </p>
+                    </details>
+                  </div>
+                </li>
+              </ol>
+            </section>
+
+            <!-- Book chapters -->
+            <section class="pub-group" aria-labelledby="pub-chapter">
+              <h3 id="pub-chapter">Book chapters</h3>
+              <ol class="pub-list">
+                <li class="pub">
+                  <span class="pub-key">B1</span>
+                  <div class="pub-body">
+                    <h4 class="pub-title">
+                      <a href="https://doi.org/10.4018/407565" target="_blank" rel="noopener"
+                        >Machine Learning: Theoretical Foundations, Practical Applications, Ethical
+                        Implications, and Future Prospects. Exploring Challenges and Applications
+                        in Emerging Technologies</a
+                      >
+                    </h4>
+                    <p class="pub-authors">
+                      <strong>A. Alagbada</strong>, T. C. Iroko and S. Tchoneteck
+                    </p>
+                    <p class="pub-venue">
+                      In M. Khosrow-Pour (ed.), <em>Encyclopedia of Modern Artificial Intelligence</em>.
+                      IGI Global, 2027.
+                    </p>
+                    <ul class="pub-links">
+                      <li>
+                        <a href="https://doi.org/10.4018/407565" target="_blank" rel="noopener"
+                          >doi:10.4018/407565</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ol>
+            </section>
+
+            <!-- Preprints -->
+            <section class="pub-group" aria-labelledby="pub-preprint">
+              <h3 id="pub-preprint">Preprints</h3>
+              <ol class="pub-list">
+                <li class="pub">
+                  <span class="pub-key">P1</span>
+                  <div class="pub-body">
+                    <h4 class="pub-title">
+                      <a href="https://doi.org/10.2139/ssrn.7289249" target="_blank" rel="noopener"
+                        >Singularity-Induced Stability Barriers in Block Second-Derivative
+                        Collocation Methods for Stiff Initial Value Problems</a
+                      >
+                    </h4>
+                    <p class="pub-authors">
+                      <strong>A. Alagbada</strong>, S. E. Fadugba, G. Kumleng, A. Bankole and M.
+                      Kekana
+                    </p>
+                    <p class="pub-venue">SSRN preprint.</p>
+                    <ul class="pub-links">
+                      <li>
+                        <a href="https://doi.org/10.2139/ssrn.7289249" target="_blank" rel="noopener"
+                          >doi:10.2139/ssrn.7289249</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="pub">
+                  <span class="pub-key">P2</span>
+                  <div class="pub-body">
+                    <h4 class="pub-title">
+                      <a
+                        href="https://doi.org/10.20944/preprints202603.1462.v1"
+                        target="_blank"
+                        rel="noopener"
+                        >Neural Regime-Switching Model with Markov-Informed Attention for
+                        Short-Horizon Equity Return Forecasting</a
+                      >
+                    </h4>
+                    <p class="pub-authors">
+                      T. Iroko, <strong>A. Alagbada</strong> and S. Tchoneteck
+                    </p>
+                    <p class="pub-venue">Preprints.org, 2026.</p>
+                    <ul class="pub-links">
+                      <li>
+                        <a
+                          href="https://doi.org/10.20944/preprints202603.1462.v1"
+                          target="_blank"
+                          rel="noopener"
+                          >doi:10.20944/preprints202603.1462.v1</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.preprints.org/frontend/manuscript/4bd834b856a4c8597914c6eee3ce563d/download_pub"
+                          target="_blank"
+                          rel="noopener"
+                          >PDF</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ol>
+            </section>
+
+            <!-- Theses -->
+            <section class="pub-group" aria-labelledby="pub-thesis">
+              <h3 id="pub-thesis">Theses</h3>
+              <ol class="pub-list">
+                <li class="pub">
+                  <span class="pub-key">T1</span>
+                  <div class="pub-body">
+                    <h4 class="pub-title">
+                      A Class of Block Second Derivative Method for Solving Stiff Ordinary
+                      Differential Equations
+                    </h4>
+                    <p class="pub-venue">
+                      MSc thesis, University of Jos, Nigeria, 2018. Supervisor: Prof. Geoffrey
+                      Kumleng.
+                    </p>
+                  </div>
+                </li>
+                <li class="pub">
+                  <span class="pub-key">T2</span>
+                  <div class="pub-body">
+                    <h4 class="pub-title">The Convergence of Some Complex Power Series</h4>
+                    <p class="pub-venue">
+                      BSc thesis, University of Jos, Nigeria, 2014. Supervisor: Dr. Silas Longwap.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </section>
+          </div>
         </div>
-        <ul class="hero-links contact-links">
-          <li>
-            <a
-              href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID"
-              target="_blank"
-              rel="noopener"
-              >Google Scholar</a
+      </section>
+
+      <!-- ============ TALKS ============ -->
+      <section id="talks" class="section section-tint">
+        <div class="wrap section-grid">
+          <h2 class="section-title">Talks</h2>
+          <div class="section-body">
+            <ol class="entries">
+              <li class="entry">
+                <p class="entry-when">June 2026</p>
+                <div class="entry-body">
+                  <h3>
+                    SAK-Net: Symplectic Attention Koopman Networks for Wave PDEs with Adaptive
+                    Analytical-Learned Dynamics
+                  </h3>
+                  <p class="entry-org">
+                    Oral presentation. 10th International Workshop on Civil Structural Health
+                    Monitoring (<span class="nowrap">CSHM-10</span>), Physics-Informed Structural Health Monitoring
+                  </p>
+                  <p>
+                    Bundesanstalt für Materialforschung <span class="nowrap">und -prüfung</span> (BAM), Berlin, Germany, 9–11
+                    June 2026.
+                  </p>
+                </div>
+              </li>
+            </ol>
+
+            <div
+              class="slideshow"
+              role="region"
+              aria-roledescription="carousel"
+              aria-label="Photos from the CSHM-10 talk"
             >
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/abiodunalagbada/"
-              target="_blank"
-              rel="noopener"
-              >LinkedIn</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://github.com/Alagbada123"
-              target="_blank"
-              rel="noopener"
-              >GitHub</a
-            >
-          </li>
-          <li>
-            <a
-              href="assets/Alagbada_Abiodun_CV.pdf"
-              target="_blank"
-              rel="noopener"
-              >CV (PDF)</a
-            >
-          </li>
-        </ul>
-        <p class="footer-line mono">
-          © <span id="year"></span> Abiodun Victor Alagbada · Weimar, Germany
-        </p>
+              <div class="slides">
+                <figure class="slide is-active">
+                  <img
+                    src="images/talks/cshm10-problem.jpg"
+                    alt="Abiodun Alagbada explaining a slide titled The Problem: Surrogates Quietly Dissipate Energy to the workshop audience"
+                    width="1500"
+                    height="1000"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Showing how standard surrogates lose energy on a conservative wave benchmark.
+                    CSHM-10, BAM Berlin.
+                  </figcaption>
+                </figure>
+                <figure class="slide">
+                  <img
+                    src="images/talks/cshm10-overview.jpg"
+                    alt="Abiodun Alagbada at the BAM lectern presenting a slide that places SAK-Net between physics-based and data-driven surrogates"
+                    width="1500"
+                    height="1000"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Introducing SAK-Net as a bridge between physics-based and data-driven
+                    surrogates. CSHM-10, BAM Berlin.
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="slide-bar">
+                <p class="slide-caption" aria-live="off"></p>
+                <div class="slide-controls">
+                  <button type="button" class="slide-btn" data-action="prev" aria-label="Previous photo">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+                  </button>
+                  <div class="slide-dots"></div>
+                  <button type="button" class="slide-btn" data-action="next" aria-label="Next photo">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+                  </button>
+                  <button
+                    type="button"
+                    class="slide-btn"
+                    data-action="toggle"
+                    aria-label="Pause slideshow"
+                    aria-pressed="false"
+                  >
+                    <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M9 6v12M15 6v12" />
+                    </svg>
+                    <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 6l10 6-10 6z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="sub-title">Posters</h3>
+            <ol class="entries">
+              <li class="entry">
+                <p class="entry-when">WS 2025/26</p>
+                <div class="entry-body">
+                  <h3>Prototypical Pipeline Orchestration for Engineers</h3>
+                  <p class="entry-org">
+                    Academic project poster. GATE Industry Project with MKP GmbH,
+                    Bauhaus-Universität Weimar
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section id="skills" class="section">
+        <div class="wrap section-grid">
+          <h2 class="section-title">Skills</h2>
+          <div class="section-body">
+            <div class="competencies">
+              <article class="card">
+                <h3>Modelling and numerical analysis</h3>
+                <ul class="bullets">
+                  <li>Koopman methods: DMD, EDMD and learned operators</li>
+                  <li>System identification from vibration data</li>
+                  <li>Reduced-order modelling</li>
+                  <li>Numerical methods for stiff ODEs</li>
+                  <li>Finite element method and structural dynamics</li>
+                </ul>
+              </article>
+              <article class="card">
+                <h3>Machine learning</h3>
+                <ul class="bullets">
+                  <li>Physics-informed learning</li>
+                  <li>Structure-preserving (symplectic) networks</li>
+                  <li>Time-series models: LSTM and attention</li>
+                  <li>Benchmarking against DMD, EDMD and LSTM baselines</li>
+                  <li>Reproducible Python workflows</li>
+                </ul>
+              </article>
+              <article class="card">
+                <h3>Back-end and web engineering</h3>
+                <ul class="bullets">
+                  <li>Web applications and REST APIs</li>
+                  <li>Real-time data pipelines with WebSockets</li>
+                  <li>Containerised services</li>
+                  <li>Automated testing and deployment</li>
+                </ul>
+              </article>
+              <article class="card">
+                <h3>Teaching and project delivery</h3>
+                <ul class="bullets">
+                  <li>Scrum team leadership</li>
+                  <li>Agile project management</li>
+                  <li>Mathematics teaching, school and one-to-one</li>
+                  <li>Curriculum planning and assessment moderation</li>
+                  <li>Written feedback on MSc thesis work</li>
+                </ul>
+              </article>
+            </div>
+
+            <h3 class="sub-title">Software and tools</h3>
+            <ul class="tags">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>C/C++</li>
+              <li>SQL</li>
+              <li>MATLAB</li>
+              <li>NumPy</li>
+              <li>Pandas</li>
+              <li>scikit-learn</li>
+              <li>TensorFlow</li>
+              <li>Jupyter</li>
+              <li>marimo</li>
+              <li>Django</li>
+              <li>Flask</li>
+              <li>FastAPI</li>
+              <li>Node.js</li>
+              <li>React</li>
+              <li>Vue 3</li>
+              <li>Docker</li>
+              <li>Git</li>
+              <li>GitHub Actions</li>
+              <li>LaTeX</li>
+              <li>TikZ</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EXPERIENCE ============ -->
+      <section id="experience" class="section section-tint">
+        <div class="wrap section-grid">
+          <h2 class="section-title">Experience</h2>
+          <div class="section-body">
+            <ol class="entries">
+              <li class="entry">
+                <p class="entry-when">2024 – present</p>
+                <div class="entry-body">
+                  <h3>PhD Candidate, Applied Mathematics</h3>
+                  <p class="entry-org">Institute of Structural Mechanics, Bauhaus-Universität Weimar</p>
+                  <p>
+                    I develop interpretable, data-driven models of structural dynamics for
+                    condition assessment and damage diagnosis. The work combines Koopman operator
+                    theory, system identification and physics-informed learning in reproducible
+                    Python workflows.
+                  </p>
+                </div>
+              </li>
+              <li class="entry">
+                <p class="entry-when">WS 2025/26</p>
+                <div class="entry-body">
+                  <h3>Scrum Master, GATE Industry Project with MKP GmbH</h3>
+                  <p class="entry-org">Bauhaus-Universität Weimar</p>
+                  <p>
+                    I led an interdisciplinary team on a real-time pipeline platform for engineers,
+                    built with Vue 3, FastAPI, WebSockets, Redpanda, QuixStreams, the Docker SDK
+                    and GitHub Actions.
+                  </p>
+                </div>
+              </li>
+              <li class="entry">
+                <p class="entry-when">2022 – present</p>
+                <div class="entry-body">
+                  <h3>Full-Stack and Back-End Developer</h3>
+                  <p class="entry-org">Freelance</p>
+                  <p>
+                    I build web applications and REST APIs in Python (Django, Flask, FastAPI) and
+                    JavaScript (Node.js, React). I package services with Docker and automate
+                    testing and deployment through GitHub Actions.
+                  </p>
+                </div>
+              </li>
+              <li class="entry">
+                <p class="entry-when">2020 – present</p>
+                <div class="entry-body">
+                  <h3>Online Mathematics Tutor</h3>
+                  <p class="entry-org">Preply and Upwork</p>
+                  <p>
+                    I design individual study plans in Mathematics and Advanced Mathematics for
+                    learners in several countries, and I teach with Jupyter, marimo and LaTeX
+                    materials.
+                  </p>
+                </div>
+              </li>
+              <li class="entry">
+                <p class="entry-when">2018 – 2023</p>
+                <div class="entry-body">
+                  <h3>Mathematics and Computer Science Teacher</h3>
+                  <p class="entry-org">Omega High School, Jos, Nigeria</p>
+                  <p>
+                    I taught Mathematics, Advanced Mathematics and Computer Science, supervised
+                    the ICT laboratory, and led assessment moderation and curriculum planning.
+                  </p>
+                </div>
+              </li>
+              <li class="entry">
+                <p class="entry-when">2014 – 2017</p>
+                <div class="entry-body">
+                  <h3>Teacher of Mathematics, Advanced Mathematics and Physics</h3>
+                  <p class="entry-org">Corpus Christi Comprehensive College, Jos, Nigeria</p>
+                  <p>
+                    I taught senior secondary classes and prepared students for the West African
+                    Senior School Certificate examinations.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section id="education" class="section">
+        <div class="wrap section-grid">
+          <h2 class="section-title">Education</h2>
+          <div class="section-body">
+            <ol class="entries">
+              <li class="entry">
+                <p class="entry-when">2024 – present</p>
+                <div class="entry-body">
+                  <h3>PhD in Applied Mathematics</h3>
+                  <p class="entry-org">Bauhaus-Universität Weimar, Germany</p>
+                  <p>
+                    Institute of Structural Mechanics. Supervisor: Prof. Tom Lahmer. Expected
+                    completion in 2028.
+                  </p>
+                </div>
+              </li>
+              <li class="entry">
+                <p class="entry-when">2016 – 2018</p>
+                <div class="entry-body">
+                  <h3>MSc Mathematics</h3>
+                  <p class="entry-org">University of Jos, Nigeria</p>
+                </div>
+              </li>
+              <li class="entry">
+                <p class="entry-when">Awarded 2020</p>
+                <div class="entry-body">
+                  <h3>Postgraduate Diploma in Education</h3>
+                  <p class="entry-org">
+                    University of Ilorin, in affiliation with the National Teachers’ Institute,
+                    Kaduna, Nigeria
+                  </p>
+                </div>
+              </li>
+              <li class="entry">
+                <p class="entry-when">2010 – 2014</p>
+                <div class="entry-body">
+                  <h3>BSc Mathematics, Second Class Honours (Upper Division)</h3>
+                  <p class="entry-org">University of Jos, Nigeria</p>
+                </div>
+              </li>
+            </ol>
+
+            <div class="columns">
+              <div>
+                <h3 class="sub-title">Awards</h3>
+                <ul class="plain-list">
+                  <li>
+                    <strong>DAAD Doctoral Scholarship</strong>
+                    <span>German Academic Exchange Service, 2025</span>
+                  </li>
+                  <li>
+                    <strong>PTDF Scholarship</strong>
+                    <span>Petroleum Technology Development Fund, Nigeria, 2023/2024 cohort</span>
+                  </li>
+                  <li>
+                    <strong>Certificate of Excellence (Bronze Medal)</strong>
+                    <span>NAMCUS 2013, National Mathematical Centre, Abuja</span>
+                  </li>
+                </ul>
+
+                <h3 class="sub-title">Memberships</h3>
+                <ul class="plain-list">
+                  <li><strong>American Mathematical Society</strong></li>
+                  <li><strong>Mathematical Association of Nigeria</strong></li>
+                  <li><strong>Black in Mathematics</strong></li>
+                  <li>
+                    <strong>Institute of Strategic Entrepreneurs, Nigeria</strong>
+                    <span>Associate Member since 2015</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="sub-title">Certifications</h3>
+                <ul class="plain-list">
+                  <li>
+                    <strong>Finite Element Method and Computational Structural Dynamics</strong>
+                    <span>NPTEL, India, 2026</span>
+                  </li>
+                  <li>
+                    <strong>Certificate in Agile Project Management</strong>
+                    <span>GATE Programme, Bauhaus-Universität Weimar, 2026</span>
+                  </li>
+                  <li>
+                    <strong>Software Engineering Programme, Back-End Specialisation</strong>
+                    <span>ALX Africa, 2024–2025</span>
+                  </li>
+                  <li>
+                    <strong>Qualified Teacher Status</strong>
+                    <span>Department for Education, England, 2025</span>
+                  </li>
+                  <li>
+                    <strong>Registered Certified Teacher</strong>
+                    <span>Teachers Registration Council of Nigeria, since 2022</span>
+                  </li>
+                </ul>
+                <p class="note">
+                  The <a href="assets/Abiodun_Alagbada.pdf" target="_blank" rel="noopener">CV</a>
+                  lists all certifications.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section id="contact" class="section section-tint">
+        <div class="wrap section-grid">
+          <h2 class="section-title">Contact</h2>
+          <div class="section-body">
+            <p class="section-intro">
+              I welcome questions and collaboration on Koopman methods, structural health
+              monitoring and physics-informed machine learning.
+            </p>
+            <dl class="contact-list">
+              <div>
+                <dt>University</dt>
+                <dd>
+                  <a href="mailto:abiodun.victor.alagbada@uni-weimar.de"
+                    >abiodun.victor.alagbada@uni-weimar.de</a
+                  >
+                </dd>
+              </div>
+              <div>
+                <dt>Personal</dt>
+                <dd><a href="mailto:abiodunalagbada@gmail.com">abiodunalagbada@gmail.com</a></dd>
+              </div>
+              <div>
+                <dt>Office</dt>
+                <dd>Institute of Structural Mechanics, Bauhaus-Universität Weimar, Germany</dd>
+              </div>
+              <div>
+                <dt>Profiles</dt>
+                <dd class="inline-links">
+                  <a
+                    href="https://scholar.google.com/citations?hl=en&amp;user=Wmna1QoAAAAJ"
+                    target="_blank"
+                    rel="noopener"
+                    >Google Scholar</a
+                  >
+                  <a href="https://orcid.org/0000-0003-4801-8907" target="_blank" rel="noopener">ORCID</a>
+                  <a href="https://github.com/Alagbada123" target="_blank" rel="noopener">GitHub</a>
+                  <a href="https://www.linkedin.com/in/abiodunalagbada/" target="_blank" rel="noopener"
+                    >LinkedIn</a
+                  >
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="year">2026</span> Abiodun Victor Alagbada</p>
+        <p><a href="#top">Back to top</a></p>
       </div>
-    </section>
+    </footer>
 
     <script src="js/main.js"></script>
   </body>

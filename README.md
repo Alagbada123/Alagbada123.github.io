@@ -1,20 +1,29 @@
-# Abiodun Victor Alagbada — Academic Portfolio
+# Abiodun Victor Alagbada: academic portfolio
 
-Static site for https://alagbada123.github.io. No build step, no dependencies.
+Source for <https://alagbada123.github.io>. The site is plain HTML, CSS and JavaScript with no build step and no dependencies. GitHub Pages serves the `main` branch.
 
 ## Structure
-- `index.html` — single-page portfolio (Research, About, Experience, Teaching, Education, Contact)
-- `css/style.css` — design system ("measurement lab": Space Grotesk / Source Serif 4 / IBM Plex Mono)
-- `js/main.js` — mobile nav + animated free-vibration signal in the hero
-- `assets/Alagbada_Abiodun_CV.pdf` — downloadable CV
-- `images/user.jpg` — portrait
 
-## Deploy
-Replace the entire contents of the `Alagbada123.github.io` repository with these files
-(delete the old `js/` libraries, `Preloader.gif`, `json/`, and old images that are no longer referenced),
-commit, and push to `main`. GitHub Pages serves it automatically.
+| Path | Purpose |
+| --- | --- |
+| `index.html` | The whole page: About, Research, Publications, Talks, Skills, Experience, Education, Contact |
+| `css/style.css` | Styles, with colour tokens for light and dark themes at the top of the file |
+| `js/main.js` | Mobile menu, section highlight in the navigation, photo slideshow, hero signal plot |
+| `assets/Abiodun_Alagbada.pdf` | CV linked from the page |
+| `images/` | Portrait, favicon, social preview image, and `talks/` for conference photos |
 
-## Before going live
-1. Replace `YOUR_SCHOLAR_ID` in `index.html` (2 places) with your real Google Scholar profile URL.
-2. Optionally replace the preprint link for the regime-switching paper with its canonical Preprints.org DOI page.
-3. Revoke the old SmtpJS SecureToken (it was exposed in the previous repository).
+## Preview locally
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open <http://localhost:8000>.
+
+## Common updates
+
+**Add a publication.** Copy an existing `<li class="pub">` block inside the right category in `index.html` (journal articles, conference papers, book chapters, preprints, theses). Give it the next key in that category, for example `J2`, and update the count in the `pub-index` navigation above the list. Link the title to the DOI.
+
+**Replace the CV.** Overwrite `assets/Abiodun_Alagbada.pdf` and keep the same file name. If the name changes, update the three links to it in `index.html`.
+
+**Add a talk photo.** Save a 3:2 JPEG, 1500 by 1000 pixels, in `images/talks/`. Add a `<figure class="slide">` with an `alt` text and a `<figcaption>` inside the `slideshow` block. The script builds the dots and controls from the slides it finds.
