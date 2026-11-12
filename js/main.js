@@ -178,6 +178,8 @@
   /* ----- hero signal: free-vibration response of three damped modes -----
      x(t) = sum_i A_i * exp(-zeta_i * w_i * t) * cos(w_d,i * t + phi_i),
      with w_d,i = w_i * sqrt(1 - zeta_i^2).
+     The three modal components are drawn thin behind the total response,
+     which is the decomposition that modal and Koopman analysis recover.
      A read head sweeps left to right like a live sensor trace, holds the
      full response, then starts again. */
   var canvas = document.getElementById("signal");
@@ -194,15 +196,17 @@
   var HOLD_MS = 2500; // pause on the finished trace before the next sweep
   var W = 0;
   var H = 0;
-  var colors = { line: "", accent: "" };
+  var colors = { line: "", accent: "", head: "", modes: [] };
+
+  function mode(i, t) {
+    var m = modes[i];
+    var wd = m.w * Math.sqrt(1 - m.z * m.z);
+    return m.A * Math.exp(-m.z * m.w * t) * Math.cos(wd * t + m.p);
+  }
 
   function signal(t) {
     var x = 0;
-    for (var i = 0; i < modes.length; i++) {
-      var m = modes[i];
-      var wd = m.w * Math.sqrt(1 - m.z * m.z);
-      x += m.A * Math.exp(-m.z * m.w * t) * Math.cos(wd * t + m.p);
-    }
+    for (var i = 0; i < modes.length; i++) x += mode(i, t);
     return x;
   }
 
@@ -210,6 +214,10 @@
     var css = getComputedStyle(document.documentElement);
     colors.line = css.getPropertyValue("--line").trim();
     colors.accent = css.getPropertyValue("--accent").trim();
+    colors.head = css.getPropertyValue("--signal").trim();
+    colors.modes = modes.map(function (m, i) {
+      return css.getPropertyValue("--mode-" + (i + 1)).trim();
+    });
   }
 
   function resize() {
@@ -225,10 +233,22 @@
   function draw(fraction) {
     var mid = H / 2;
     var amp = H * 0.42; // |x(t)| <= sum of A_i = 1.06, so the trace stays inside the canvas
+    var timeAt = function (px) {
+      return (px / W) * DURATION_S;
+    };
     var yAt = function (px) {
-      return mid - signal((px / W) * DURATION_S) * amp;
+      return mid - signal(timeAt(px)) * amp;
+    };
+    var end = Math.max(1, W * fraction);
+    var trace = function (valueAt, until) {
+      ctx.beginPath();
+      ctx.moveTo(0, mid - valueAt(0) * amp);
+      for (var px = 1; px < until; px++) ctx.lineTo(px, mid - valueAt(timeAt(px)) * amp);
+      ctx.lineTo(until, mid - valueAt(timeAt(until)) * amp);
+      ctx.stroke();
     };
     ctx.clearRect(0, 0, W, H);
+    ctx.lineJoin = "round";
 
     ctx.strokeStyle = colors.line;
     ctx.lineWidth = 1;
@@ -237,28 +257,43 @@
     ctx.lineTo(W, mid);
     ctx.stroke();
 
-    var end = Math.max(1, W * fraction);
+    // modal components, thin and behind the total
+    ctx.lineWidth = 1;
+    ctx.globalAlpha = 0.75;
+    modes.forEach(function (m, i) {
+      // stop a mode where its envelope A * exp(-zeta * w * t) falls below half a pixel,
+      // so a decayed mode does not leave a flat coloured line on the axis
+      var tVisible = Math.log((m.A * amp) / 0.5) / (m.z * m.w);
+      ctx.strokeStyle = colors.modes[i];
+      trace(function (t) {
+        return mode(i, t);
+      }, Math.min(end, (tVisible / DURATION_S) * W));
+    });
+    ctx.globalAlpha = 1;
+
+    // total response
     ctx.strokeStyle = colors.accent;
-    ctx.lineWidth = 1.5;
-    ctx.lineJoin = "round";
-    ctx.beginPath();
-    ctx.moveTo(0, yAt(0));
-    for (var px = 1; px < end; px++) ctx.lineTo(px, yAt(px));
-    ctx.lineTo(end, yAt(end));
-    ctx.stroke();
+    ctx.lineWidth = 2;
+    trace(signal, end);
 
     if (fraction < 1) {
-      // read head: a faint cursor line and a dot riding on the trace
-      ctx.globalAlpha = 0.3;
-      ctx.lineWidth = 1;
+      // read head, in its own colour: a cursor line, a halo and a dot riding on the trace
+      var yHead = yAt(end);
+      ctx.strokeStyle = colors.head;
+      ctx.fillStyle = colors.head;
+      ctx.globalAlpha = 0.6;
+      ctx.lineWidth = 1.25;
       ctx.beginPath();
-      ctx.moveTo(end, 4);
-      ctx.lineTo(end, H - 4);
+      ctx.moveTo(end, 2);
+      ctx.lineTo(end, H - 2);
       ctx.stroke();
-      ctx.globalAlpha = 1;
-      ctx.fillStyle = colors.accent;
+      ctx.globalAlpha = 0.22;
       ctx.beginPath();
-      ctx.arc(end, yAt(end), 3.5, 0, Math.PI * 2);
+      ctx.arc(end, yHead, 10, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.globalAlpha = 1;
+      ctx.beginPath();
+      ctx.arc(end, yHead, 4.5, 0, Math.PI * 2);
       ctx.fill();
     }
   }
